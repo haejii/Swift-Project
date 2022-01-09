@@ -94,12 +94,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cityNameLable" destination="f7q-cp-fXP" id="6Vc-pm-2sc"/>
+                        <outlet property="cityNameLabel" destination="IDR-1r-X7E" id="IL9-v5-wNX"/>
                         <outlet property="cityNameTextField" destination="pz0-Ha-2Kj" id="G63-Sm-H8T"/>
                         <outlet property="maxTempLabel" destination="eDb-PV-gEI" id="A75-GR-T8x"/>
                         <outlet property="minTempLabel" destination="hOD-S1-42e" id="pf8-lm-rXT"/>
                         <outlet property="tempLabel" destination="OtD-7P-EPN" id="E9P-Zx-9Nj"/>
-                        <outlet property="weatherDescriptionLabel" destination="f7q-cp-fXP" id="o1D-QM-4rG"/>
+                        <outlet property="weatherDescriptionLabel" destination="f7q-cp-fXP" id="V5P-Uy-CnY"/>
+                        <outlet property="weatherStackView" destination="ZDp-uU-92X" id="xtl-Mh-nJ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
