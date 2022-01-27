@@ -59,6 +59,7 @@ class ViewController: UIViewController {
             if let response = response as? HTTPURLResponse, successRange.contains(response.statusCode) {
                 guard let weatherInfomation = try? decoder.decode(WeatherInformation.self, from: data) else
                     { return }
+                // 메인쓰레드에서 받아서 처리해야해서 이렇게 안하면 메인쓰레드로 가지 않음
                 DispatchQueue.main.async {
                     self?.weatherStackView.isHidden = false
                     self?.configureView(weatherInformation: weatherInfomation)
