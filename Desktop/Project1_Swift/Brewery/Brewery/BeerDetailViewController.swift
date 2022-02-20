@@ -4,7 +4,6 @@
 //
 //  Created by 양혜지 on 2022/01/30.
 //
-
 import UIKit
 
 class BeerDetailViewController: UITableViewController {
@@ -19,17 +18,15 @@ class BeerDetailViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "BeerDetailListCell")
         tableView.rowHeight = UITableView.automaticDimension
         
-        let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 300)
-        let headerView = UIImageView(frame: frame)
+        let headerView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 300))
         let imageURL = URL(string: beer?.imageURL ?? "")
-        
         headerView.contentMode = .scaleAspectFit
-        headerView.kf.setImage(with: imageURL, placeholder: UIImage(named: ""))
-        
+        headerView.kf.setImage(with: imageURL, placeholder: #imageLiteral(resourceName: "beer_icon"))
         tableView.tableHeaderView = headerView
     }
 }
 
+//UITableView DataSource, Delegate
 extension BeerDetailViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 4
@@ -44,7 +41,7 @@ extension BeerDetailViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
             return "ID"
@@ -53,39 +50,32 @@ extension BeerDetailViewController {
         case 2:
             return "Brewers Tips"
         case 3:
-            //let numberOfFoodParin  = beer?.foodParing?.count ?? 0
-            let isFoodParingEmpty = beer?.foodParing?.isEmpty ?? true
-            return isFoodParingEmpty ? nil : "Food Paring"
-        default :
+            let foodParing = beer?.foodParing?.count ?? 0
+            let containFoodParing = foodParing != 0
+            return containFoodParing ? "Food Paring" : nil
+        default:
             return nil
         }
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
-    UITableViewCell {
-     
-            let cell = UITableViewCell(style: .default, reuseIdentifier: "BeerDetailListCell")
-            
-            cell.textLabel?.numberOfLines = 0
-            cell.selectionStyle = .none
-            
-            switch indexPath.section {
-            case 0:
-                cell.textLabel?.text = String(describing: beer?.id ?? 0)
-                return cell
-            case 0:
-                cell.textLabel?.text = beer?.description ?? "설명 없는 맥주"
-                return cell
-            case 0:
-                cell.textLabel?.text = beer?.description ?? "팁 없는 맥주"
-                return cell
-            case 0:
-                cell.textLabel?.text = beer?.foodParing?[indexPath.row] ?? ""
-                return cell
-            default:
-                return cell
-            
-            }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "BeerDetailListCell")
+        cell.textLabel?.numberOfLines = 0
+        cell.selectionStyle = .none
+        
+        switch indexPath.section {
+        case 0:
+            cell.textLabel?.text = String(describing: beer?.id ?? 0)
+            return cell
+        case 1:
+            cell.textLabel?.text = beer?.description ?? "설명 없는 맥주"
+            return cell
+        case 2:
+            cell.textLabel?.text = beer?.brewersTips ?? "팁 없는 맥주"
+            return cell
+        default:
+            cell.textLabel?.text = beer?.foodParing?[indexPath.row] ?? ""
+            return cell
         }
     }
-
+}

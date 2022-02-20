@@ -18,11 +18,13 @@ import Foundation
 struct WeatherInformation: Codable {
   let weather: [Weather]
   let temp: Temp
+  let wind : Wind
   let name: String
 
   enum CodingKeys: String, CodingKey {
     case weather
     case temp = "main"
+    case wind
     case name
   }
 }
@@ -35,6 +37,10 @@ struct Weather: Codable {
   let icon: String
 }
 
+struct Wind: Codable {
+    let speed : Double
+    let deg : Double
+}
 
 // JSON과 이름 다르게 하고 프로퍼티 이름이 달라도 매핑 시키기
 struct Temp: Codable {
@@ -42,6 +48,8 @@ struct Temp: Codable {
   let feelsLike: Double
   let minTemp: Double
   let maxTemp: Double
+  let pressure: Double
+  let humidity: Double
     
     // 매핑시키기
     enum CodingKeys: String, CodingKey {
@@ -49,5 +57,7 @@ struct Temp: Codable {
       case feelsLike = "feels_like"
       case minTemp = "temp_min"
       case maxTemp = "temp_max"
+      case pressure
+      case humidity
     }
   }

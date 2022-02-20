@@ -36,25 +36,23 @@ class BeerListCell: UITableViewCell {
             $0.height.equalTo(120)
         }
         
-        nameLabel.snp.makeConstraints{
+        nameLabel.snp.makeConstraints {
             $0.leading.equalTo(beerImageView.snp.trailing).offset(10)
             $0.bottom.equalTo(beerImageView.snp.centerY)
             $0.trailing.equalToSuperview().inset(20)
-            
         }
         
-        taglineLabel.snp.makeConstraints{
+        taglineLabel.snp.makeConstraints {
             $0.leading.trailing.equalTo(nameLabel)
             $0.top.equalTo(nameLabel.snp.bottom).offset(5)
         }
     }
     
     func configure(with beer: Beer) {
-        let imageURL = URL(string: beer .imageURL ?? "")
-        beerImageView.kf.setImage(with: imageURL, placeholder: #imageLiteral(resourceName: "" ))
+        let imageURL = URL(string: beer.imageURL ?? "")
+        beerImageView.kf.setImage(with: imageURL, placeholder: #imageLiteral(resourceName: "beer_icon"))
         nameLabel.text = beer.name ?? "이름 없는 맥주"
         taglineLabel.text = beer.tagLine
-        
         accessoryType = .disclosureIndicator
         selectionStyle = .none
     }
