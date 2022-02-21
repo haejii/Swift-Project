@@ -13,6 +13,8 @@
 		2E228F7627C27CC400CC41D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E228F7427C27CC400CC41D7 /* LaunchScreen.storyboard */; };
 		2E228F7E27C27D1B00CC41D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E228F7D27C27D1B00CC41D7 /* HomeViewController.swift */; };
 		2E228F8127C27E6D00CC41D7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2E228F8027C27E6D00CC41D7 /* SnapKit */; };
+		2E2E467A27C3B0BC009DFA49 /* Content.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E2E467927C3B0BC009DFA49 /* Content.plist */; };
+		2E2E467C27C3B3B9009DFA49 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E467B27C3B3B9009DFA49 /* Content.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		2E228F7527C27CC400CC41D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E228F7727C27CC400CC41D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E228F7D27C27D1B00CC41D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2E2E467927C3B0BC009DFA49 /* Content.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Content.plist; path = "../../../../Downloads/Part 3. Intermediate/Ch6_NetflixStyle/Content.plist"; sourceTree = "<group>"; };
+		2E2E467B27C3B3B9009DFA49 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				2E228F7427C27CC400CC41D7 /* LaunchScreen.storyboard */,
 				2E228F7727C27CC400CC41D7 /* Info.plist */,
 				2E228F7D27C27D1B00CC41D7 /* HomeViewController.swift */,
+				2E2E467927C3B0BC009DFA49 /* Content.plist */,
+				2E2E467B27C3B3B9009DFA49 /* Content.swift */,
 			);
 			path = NetfilixStyleSampleApp;
 			sourceTree = "<group>";
@@ -132,6 +138,7 @@
 			files = (
 				2E228F7627C27CC400CC41D7 /* LaunchScreen.storyboard in Resources */,
 				2E228F7327C27CC400CC41D7 /* Assets.xcassets in Resources */,
+				2E2E467A27C3B0BC009DFA49 /* Content.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +152,7 @@
 				2E228F6A27C27CC300CC41D7 /* AppDelegate.swift in Sources */,
 				2E228F6C27C27CC300CC41D7 /* SceneDelegate.swift in Sources */,
 				2E228F7E27C27D1B00CC41D7 /* HomeViewController.swift in Sources */,
+				2E2E467C27C3B3B9009DFA49 /* Content.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
