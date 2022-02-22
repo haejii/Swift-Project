@@ -8,7 +8,7 @@
 import UIKit
 
 struct Content: Decodable {
-    let sectionType: String
+    let sectionType: SectionType
     let sectionName: String
     let contentItem: [Item]
     
