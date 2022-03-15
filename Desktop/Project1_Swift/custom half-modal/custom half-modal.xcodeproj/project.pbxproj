@@ -15,6 +15,7 @@
 		2E29EACF27E0DE770016EBCB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2E29EACE27E0DE770016EBCB /* SnapKit */; };
 		2E29EAD227E0DFC30016EBCB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2E29EAD127E0DFC30016EBCB /* RxCocoa */; };
 		2E29EAD427E0DFC30016EBCB /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2E29EAD327E0DFC30016EBCB /* RxSwift */; };
+		2E29EAD627E0E0BC0016EBCB /* ButtonSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E29EAD527E0E0BC0016EBCB /* ButtonSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		2E29EAC327E0DBD30016EBCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E29EAC527E0DBD30016EBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E29EACB27E0DCA30016EBCB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2E29EAD527E0E0BC0016EBCB /* ButtonSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				2E29EAC227E0DBD30016EBCB /* LaunchScreen.storyboard */,
 				2E29EAC527E0DBD30016EBCB /* Info.plist */,
 				2E29EACB27E0DCA30016EBCB /* MainViewController.swift */,
+				2E29EAD527E0E0BC0016EBCB /* ButtonSheet.swift */,
 			);
 			path = "custom half-modal";
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E29EACC27E0DCA30016EBCB /* MainViewController.swift in Sources */,
+				2E29EAD627E0E0BC0016EBCB /* ButtonSheet.swift in Sources */,
 				2E29EAB827E0DBD20016EBCB /* AppDelegate.swift in Sources */,
 				2E29EABA27E0DBD20016EBCB /* SceneDelegate.swift in Sources */,
 			);

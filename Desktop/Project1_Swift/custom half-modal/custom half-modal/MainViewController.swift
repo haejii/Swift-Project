@@ -15,6 +15,7 @@ class MainViewController : UIViewController {
         let button = UIButton(frame: .zero)
         button.setTitle("더보기", for: .normal)
         button.setTitleColor(UIColor.blue, for: .normal)
+        button.addTarget(self, action: #selector(onClick(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -27,7 +28,6 @@ class MainViewController : UIViewController {
         title = "custom half Modal"
         navigationController?.navigationBar.prefersLargeTitles = true
         self.setUILayouts()
-        self.registerRxActions()
     }
 }
 
@@ -43,8 +43,10 @@ extension MainViewController {
         }
     }
     
-    fileprivate func registerRxActions() {
-        
-      
+    @objc internal func onClick(_ sender: Any){
+        let bottomSheetVC = BottomSheetViewController()
+        bottomSheetVC.modalPresentationStyle = .overFullScreen
+        self.present(bottomSheetVC, animated: false, completion: nil)
+        print("oncloick")
     }
 }
